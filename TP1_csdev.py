@@ -1,7 +1,7 @@
 #exo2 tp cs dev
 #salager benoit
 #19/09/2023
-
+from math import *
 def isbissex(annee):     
     #teste des conditions pour savoir si l'année est bissextile
     if annee%4 == 0 and annee%100 != 0 or annee%400 == 0:
@@ -41,8 +41,16 @@ def mesImpots(revenu):
     float(input("revenu :"))
     #taux:[0,11,30,41,45]
     #montant:[10225,26070,74 545,160336]
-    taxe={10225:0,26070:11,74545:30,160336:41}
+    #taxe={ 10225:0 , 26070:11 , 74545:30 , 160336:41 }
     if revenu<=10225:
         return 0
     elif revenu <= 26070:
-        return 
+        return ceil((revenu-10225)*0.11)
+    elif revenu <= 74545:
+        return 1744+ceil((revenu-26070)*0.30)
+    elif revenu <= 160336:
+        return 16287+ceil((revenu-75454)*0.41)
+    elif revenu>=160336:
+        return 51462+ceil((revenu-160336)*0.41)
+
+#exo4
