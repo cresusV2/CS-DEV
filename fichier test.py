@@ -17,4 +17,4 @@ B=[[1,1,1],[2,2,2],[3,3,3]]
 print(A[1])
 print(multiplication(A,B))
 """
-print(mesImpots())
+Hanoi(5)

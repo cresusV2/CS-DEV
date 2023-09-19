@@ -72,9 +72,13 @@ def multiplication(A,B):
                         C.append(A[i][v]*B[f][j])
         M=oskour(C)     
 
-#marche pas dommage
 
 #exo5
 
-def Hanoi():
-
+def Hanoi(n):
+    if n>1:
+        print("deplace",n,"de plot 1 vers plot 2")
+        print("deplace",n-1,"de plot 1 vers plot 3")
+        print("deplace",n,"de plot 2 vers plot 3") 
+        Hanoi(n-1)
+               
