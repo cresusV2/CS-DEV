@@ -37,8 +37,8 @@ def isvalid(date):
 
 #exo3
 
-def mesImpots(revenu):
-    float(input("revenu :"))
+def mesImpots():
+    revenu=float(input("revenu :"))
     #taux:[0,11,30,41,45]
     #montant:[10225,26070,74 545,160336]
     #taxe={ 10225:0 , 26070:11 , 74545:30 , 160336:41 }
@@ -54,3 +54,27 @@ def mesImpots(revenu):
         return 51462+ceil((revenu-160336)*0.41)
 
 #exo4
+def oskour(m):
+    D=[]
+    D.append(m[3:])
+    print(D)
+    if len(m)==0:
+        return D
+    else :
+        return oskour(m[3:])
+def multiplication(A,B):
+        C=[]
+        M=[]
+        for i in range(3):
+            for v in range(3):
+                for j in range(3):
+                    for f in range(3):
+                        C.append(A[i][v]*B[f][j])
+        M=oskour(C)     
+
+#marche pas dommage
+
+#exo5
+
+def Hanoi():
+
